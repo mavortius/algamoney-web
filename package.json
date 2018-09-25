@@ -14,6 +14,9 @@
     "aurelia-polyfills": "^1.3.0",
     "aurelia-validation": "^1.2.2",
     "bluebird": "^3.5.1",
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.2.1",
     "moment": "^2.22.2",
     "querystringify": "^2.0.0"
   },
