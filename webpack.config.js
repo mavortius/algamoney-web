@@ -34,7 +34,7 @@ module.exports = ({production, server, extractCss, coverage, analyze, karma} = {
   },
   entry: {
     app: ['aurelia-bootstrapper'],
-    vendor: ['bluebird'],
+    vendor: ['bluebird', 'jquery', 'bootstrap'],
   },
   mode: production ? 'production' : 'development',
   output: {
@@ -92,7 +92,10 @@ module.exports = ({production, server, extractCss, coverage, analyze, karma} = {
     ...when(!karma, new DuplicatePackageCheckerPlugin()),
     new AureliaPlugin(),
     new ProvidePlugin({
-      'Promise': 'bluebird'
+      'Promise': 'bluebird',
+      '$': 'jquery',
+      'jQuery': 'jquery',
+      'window.jquery':'jquery'
     }),
     new ModuleDependenciesPlugin({
       'aurelia-testing': [ './compile-spy', './view-spy' ]
